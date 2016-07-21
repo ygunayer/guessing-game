@@ -1,5 +1,10 @@
 package com.yalingunayer.guess
 
+import akka.actor.Actor
+import akka.actor.ActorSystem
+
 object Application extends App {
-  println("Hello, world!")
+  val system = ActorSystem()
+  
+  val game = system.actorOf(Game.props)
 }
